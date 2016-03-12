@@ -8,6 +8,7 @@
   	        <methods>
   	            <include name="scrollToBottom"/>
   	            <include name="testCommit"/>
+  	            <include name="testThing"/>
   	        </methods>
   	    </class>
   	</classes>
