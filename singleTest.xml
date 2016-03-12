@@ -7,6 +7,7 @@
   	    <class name="start.Testscript">
   	        <methods>
   	            <include name="scrollToBottom"/>
+  	            <include name="testCommit"/>
   	        </methods>
   	    </class>
   	</classes>
