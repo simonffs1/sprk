@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false" preserve-order="true" thread-count="1">
+ <parameter name="port" value="4723"/>
+ 
+  <test name="Smoke: Connection">
+  	<classes>
+  	    <class name="start.Testscript">
+  	        <methods>
+  	            <include name="connectRobot"/>
+  	            <include name="firmwareUpdate"/>
+  	            <include name="disconnectRobot"/>
+  	        </methods>
+  	    </class>
+  	</classes>
+  </test>
+   
+  <test name="Smoke: Signed in features">    
+
+    <classes>
+      <class name="start.Testscript">
+      	<methods>
+      	<include name="signIn"/>
+      	<include name="createProgram"/>
+      	<include name="editMyProgram"/>
+      	<include name="copyMyProgram"/>
+      	<include name="deleteMyProgramSignIn"/>
+      	<include name="copySampleProgram"/>
+      	<include name="viewSampleProgram"/>
+      	<include name="copyExploreProgram"/>
+      	<include name="viewExploreProgram"/>
+      	<include name="postMedia"/>
+      	<include name="signOut"/>
+      	</methods>
+      	
+      </class>
+    </classes>
+  </test> 
+  
+  <test name="Smoke: Signed out">
+	<parameter name = "date" value="Feb 24"/>
+  	<classes>
+  	    <class name="start.Testscript">
+  	        <methods>
+  	            <include name="createProgram"/>
+  	            <include name="deleteRenameProgramSignedOut"/>
+  	            <include name="copySampleProgram"/>
+  	            <include name="viewSampleProgram"/>
+  	            <include name="deleteAllProgramsSignedOut" />
+  	            <include name="userGates"/>
+  	            <include name="viewMedia"/>
+  	            <include name="pocketNav"/>
+  	            <include name="gesturePocketNav"/>
+  	        </methods>
+  	    </class>
+  	</classes>
+  </test>
+  <!--  
+  <test name= "Extended Test">
+  <classes> 
+  <class name="start.Testscript">
+  <methods>
+    	        <include name="scrollExplore"/>
+  	            <include name="scrollTwitter"/>
+  	            <include name="scrollToBottomToTop"/>
+  </methods>	
+  
+  </class>
+  </classes>
+  </test>
+-->
+
+ <test name="Sign up">
+ <parameter name="instructor_username" value="ffsqatsignupi3"/>
+ <parameter name="password" value="yyyyyy"/>
+ <parameter name="instructor_email" value="ffsqatsignup+i3@gmail.com"/>
+ <classes>
+ <class name="start.Testscript">
+ <methods>
+ <include name="signUpInstructor"/>
+ <include name="signOut"/>
+ </methods>
+ </class>
+ </classes>
+ </test>
+
+</suite> <!-- Suite -->
