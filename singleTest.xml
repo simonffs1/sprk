@@ -9,6 +9,7 @@
   	            <include name="scrollToBottom"/>
   	            <include name="testCommit"/>
   	            <include name="testThing"/>
+  	            <include name="frommypc"/>
   	        </methods>
   	    </class>
   	</classes>
