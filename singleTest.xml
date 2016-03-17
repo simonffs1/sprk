@@ -10,6 +10,7 @@
   	            <include name="testCommit"/>
   	            <include name="test2Thing"/>
   	            <include name="frommymac"/>
+  	            <include name="frommypc"/>
   	        </methods>
   	    </class>
   	</classes>
